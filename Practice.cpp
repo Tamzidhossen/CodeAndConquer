@@ -17,8 +17,12 @@ void file()
 }
 
 void Solutions(){
-    int n; cin >> n;
-    cout << "Hello " << n << endl; 
+    vector <int> v = {2, 4, 1, 5, 8};
+    sort(v.begin(), v.end());
+    for(int x : v) {
+        cout << x << " ";
+    }
+    cout << endl;
 }
 
 int main()
