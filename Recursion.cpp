@@ -2,16 +2,16 @@
 
 using namespace std;
 
-void Recursion(int n) {
-    if(n == 0) {
-        return;
+int Recursion(int n) {
+    if(n == 1) {
+        return 1;
     }
 
-    Recursion(n-1);
-    cout << n << " ";
+    return n * Recursion(n-1);
+    
 }
 
 int main() {
-    Recursion(5);
-    cout << endl;
+    int ans = Recursion(5);
+    cout << ans << endl;
 }
