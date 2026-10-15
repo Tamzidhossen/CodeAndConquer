@@ -17,10 +17,21 @@ void file()
 }
 
 void Solutions(){
-    vector <int> v = {2, 4, 1, 5, 8};
-    sort(v.begin(), v.end());
-    for(int x : v) {
-        cout << x << " ";
+    vector<vector<int>> matrix = {
+        { 1, 2, 3 },
+        { 4, 5, 6 },
+        { 7, 8, 9 },
+    };
+
+    int row = matrix.size();
+    // cout << row << endl;
+    for(int i=0; i<row; i++) {
+        // cout << matrix[i][1] << " ";
+        int col = matrix[i].size();
+        for(int j=0; j<col; j++) {
+            cout << matrix[i][j] << " ";
+        }
+        cout << endl;
     }
     cout << endl;
 }
