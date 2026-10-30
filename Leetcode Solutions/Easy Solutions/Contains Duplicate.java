@@ -13,12 +13,21 @@ public:
 
         return false; */   //Brute Force Approce
 
-        sort(nums.begin(), nums.end());
+        /* sort(nums.begin(), nums.end());
 
         for(int i=1; i<n; i++) {
             if(nums[i] == nums[i-1]) {
                 return true;
             }
+        }
+        return false; */
+
+        unordered_set<int> st;
+        for(auto num : nums) {
+            if(st.find(num) != st.end()) {
+                return true;
+            }
+            st.insert(num);
         }
         return false;
     }
